@@ -697,7 +697,7 @@ function GetMangos()
       0)
         Log "Cloning Zero branch: $BRANCH" 1
         git clone git@github.com:SandWind/myzeroserver.git  "$SRCPATH/server" -b $BRANCH --recursive
-        git clone git@github.com:mangoszero/database.git "$SRCPATH/database" -b $BRANCH --recursive
+        git clone git@github.com:SandWind/database.git "$SRCPATH/database" -b $BRANCH --recursive
         ;;
 
       1)
