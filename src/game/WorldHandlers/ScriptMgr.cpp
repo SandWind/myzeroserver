@@ -2818,6 +2818,17 @@ bool ScriptMgr::OnGossipSelect(Player* pPlayer, Item* pItem, uint32 sender, uint
     // Used by Eluna
 #ifdef ENABLE_ELUNA
 // TODO Add Eluna handlers
+    std::string tmp("");
+    if(  code != nullptr && strlen(code) >0)
+    {   
+        tmp.assign(std::string(code));
+    }
+    const std::string& codestr = tmp;
+    if(sEluna->HandleGossipSelectOption(pPlayer,pItem,sender,action,codestr))
+    {
+        return true;
+    }
+    
 #endif /* ENABLE_ELUNA */
 
 #ifdef ENABLE_SD3

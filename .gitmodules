@@ -15,4 +15,4 @@
     url = git@github.com:mangostools/EasyBuild
 [submodule "src/modules/Eluna"]
 	path = src/modules/Eluna
-	url = git@github.com:ElunaLuaEngine/Eluna
+	url = git@github.com:SandWind/myEluna.git

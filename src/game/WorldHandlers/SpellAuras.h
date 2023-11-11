@@ -248,7 +248,7 @@ class SpellAuraHolder
         bool m_isHeartbeatSubject: 1;
         bool m_deleted: 1;
 
-        uint32 m_in_use;                                    // > 0 while in SpellAuraHolder::ApplyModifiers call/SpellAuraHolder::Update/etc
+        uint64 m_in_use;                                    // > 0 while in SpellAuraHolder::ApplyModifiers call/SpellAuraHolder::Update/etc
 };
 
 typedef void(Aura::*pAuraHandler)(bool Apply, bool Real);
