@@ -248,7 +248,7 @@ class SpellAuraHolder
         bool m_isHeartbeatSubject: 1;
         bool m_deleted: 1;
 
-        uint64 m_in_use;                                    // > 0 while in SpellAuraHolder::ApplyModifiers call/SpellAuraHolder::Update/etc
+        int64 m_in_use;                                    // > 0 while in SpellAuraHolder::ApplyModifiers call/SpellAuraHolder::Update/etc
 };
 
 typedef void(Aura::*pAuraHandler)(bool Apply, bool Real);
@@ -514,7 +514,7 @@ class Aura
         bool m_isAreaAura: 1;
         bool m_isPersistent: 1;
 
-        uint32 m_in_use;                                    // > 0 while in Aura::ApplyModifier call/Aura::Update/etc
+        int64 m_in_use;                                    // > 0 while in Aura::ApplyModifier call/Aura::Update/etc
 
         SpellAuraHolder* const m_spellAuraHolder;
     private:
